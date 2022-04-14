@@ -9,7 +9,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-app.use("/users", userRoutes);
+app.use("/user", userRoutes);
 
 const CONNECTION_URL =
   "mongodb+srv://arsimsejdiu:arsimsejdiu@cluster0.oys3c.mongodb.net/bikair?retryWrites=true&w=majority";
@@ -21,5 +21,5 @@ mongoose
     app.listen(PORT, () =>
       console.log(`Server Running on Port: http://localhost:${PORT}`)
     )
-  ) 
+  )
   .catch((error) => console.log(`${error} did not connect`));
